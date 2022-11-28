@@ -29,9 +29,8 @@ export default{
         <div class="characters-found">
             <h6 class="text-white p-3">Found 62 Characters</h6>
         </div>
-
-        <div v-if="this.isFinished" class="characters-list row mt-4 mx-3">
-            <CardComponent 
+        <div v-if="this.isFinished" class="characters-list d-flex flex-wrap mt-4 mx-3">
+            <CardComponent
             v-for="(character) in charactersList"
             :info="character" />
         </div>

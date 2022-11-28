@@ -22,15 +22,29 @@ export default{
 
 <style lang="scss" scoped>
     .character-card{
-        width: calc(100% / 5 - 9px);
-        margin-right: 10px;
+        width: 100%;
+        margin-right: 5px;
+        margin-left: 5px;
         background-color: var(--card-bg-color);
 
         &:nth-child(5n){
             margin-right: 0;
         }
+
         .character__category{
             font-size: 1.25rem;
+        }
+        @media screen and (min-width: 768px){
+            width: calc(100% / 2 - 10px);
+        }
+        @media screen and (min-width: 992px){
+            width: calc(100% / 3 - 10px);
+        }
+        @media screen and (min-width: 1200px){
+            width: calc(100% / 4 - 10px);
+        }
+        @media screen and (min-width: 1400px){
+            width: calc(100% / 5 - 10px);
         }
     }
 </style>
