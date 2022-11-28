@@ -151,13 +151,13 @@ section{
     color: white;
     -webkit-text-stroke: 0px white;
     overflow: hidden;
-    animation: loading 1s ease-out forwards;
+    animation: loading 2s linear;
 }
 @keyframes loading {
     0% { width: 0; }
     20% { width: 45%; }
-    80% { width: 75%; }
-    90% { width: 85%; }
+    70% { width: 75%; }
+    80% { width: 85%; }
     100% { width: 100%; }
 }
 </style>
