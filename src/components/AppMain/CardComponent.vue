@@ -22,8 +22,13 @@ export default{
 
 <style lang="scss" scoped>
     .character-card{
-        width: calc(100% / 5 - 20px);
+        width: calc(100% / 5 - 9px);
+        margin-right: 10px;
         background-color: var(--card-bg-color);
+
+        &:nth-child(5n){
+            margin-right: 0;
+        }
         .character__category{
             font-size: 1.25rem;
         }
