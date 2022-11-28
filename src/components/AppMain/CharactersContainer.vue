@@ -5,7 +5,7 @@ import axios from 'axios'
 export default{
     name: 'CharactersContainer',
     components:{
-        CardComponent
+        CardComponent,
     },
     data(){
         return{

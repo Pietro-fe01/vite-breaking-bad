@@ -1,6 +1,8 @@
 <script>
 export default{
     name: 'CardComponent',
+    components:{
+    },
     props: {
         info: Object,
     }
@@ -30,7 +32,6 @@ export default{
         &:nth-child(5n){
             margin-right: 0;
         }
-
         .character__category{
             font-size: 1.25rem;
         }
