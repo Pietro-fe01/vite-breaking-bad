@@ -1,18 +1,21 @@
 <script>
 export default{
-    name: 'CardComponent'
+    name: 'CardComponent',
+    props: {
+        info: Object,
+    }
 }
 </script>
 
 <template>
-    <div class="character-card text-center pb-5">
+    <div class="character-card text-center pb-4 mb-3">
         <div class="character__image p-3">
-            <div class="box"></div>
+            <img :src="info.img" :alt="`${info.name}-image`">
         </div>
-        <h4 class="character__name text-white my-3">Walter White</h4>
+        <h4 class="character__name text-white my-3">{{info.name}}</h4>
         <div class="text-muted">
-            <div class="character__category">Breaking Bad</div>
-            <small class="character__status pb-3">Presumed dead</small>
+            <div class="character__category">{{info.category}}</div>
+            <small class="character__status pb-3">{{info.status}}d</small>
         </div>
     </div>
 </template>
@@ -21,10 +24,8 @@ export default{
     .character-card{
         width: calc(100% / 5 - 20px);
         background-color: var(--card-bg-color);
-        .box{
-            width: 100%;
-            height: 250px;
-            background-color: red;
+        .character__image img{
+            max-width: 100%;
         }
 
         .character__category{
