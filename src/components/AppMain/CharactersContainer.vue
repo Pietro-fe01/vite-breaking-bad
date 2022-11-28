@@ -9,15 +9,18 @@ export default{
     },
     data(){
         return{
-            charactersList: []
+            charactersList: [],
+            isFinished: false
         }
+    },
+    methods:{
     },
     created(){
         axios.get("https://www.breakingbadapi.com/api/characters").then((response) => {
             this.charactersList = response.data;
+            this.isFinished = true;
         })
-        console.log(this.charactersList)
-    }
+    },
 }
 </script>
 
@@ -27,12 +30,12 @@ export default{
             <h6 class="text-white p-3">Found 62 Characters</h6>
         </div>
 
-        <div class="characters-list row justify-content-around mt-4 mx-3">
+        <div v-if="this.isFinished" class="characters-list row justify-content-around mt-4 mx-3">
             <CardComponent 
-            v-for="character in charactersList"
-            class=""
-            :info="character"/>
+            v-for="(character) in charactersList"
+            :info="character" />
         </div>
+        <div v-else>Generando</div>
     </section>
 </template>
 

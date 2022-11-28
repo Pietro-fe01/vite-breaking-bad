@@ -8,9 +8,9 @@ export default{
 </script>
 
 <template>
-    <div class="character-card text-center pb-4 mb-3">
+    <div class="character-card text-center pb-4 mb-4">
         <div class="character__image p-3">
-            <img :src="info.img" :alt="`${info.name}-image`">
+            <img class="w-100" :src="info.img" :alt="`${info.name}-image`">
         </div>
         <h4 class="character__name text-white my-3">{{info.name}}</h4>
         <div class="text-muted">
@@ -24,10 +24,6 @@ export default{
     .character-card{
         width: calc(100% / 5 - 20px);
         background-color: var(--card-bg-color);
-        .character__image img{
-            max-width: 100%;
-        }
-
         .character__category{
             font-size: 1.25rem;
         }
