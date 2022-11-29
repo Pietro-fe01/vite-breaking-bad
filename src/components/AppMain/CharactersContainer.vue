@@ -16,7 +16,7 @@ export default{
 </script>
 
 <template>
-    <section class="bg-light px-5 py-4">
+    <section class="bg-light px-5 py-4 mb-5">
         <!-- Barra in cui viene mostrato il numero dei contatti trovati -->
         <div class="characters-found">
             <h6 v-if="store.charactersList.length === 0" class="text-white px-3">

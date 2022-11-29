@@ -6,7 +6,7 @@ export default {
     name: 'SelectCategory',
     data(){
         return{
-            store
+            store,
         }
     },
     methods:{
@@ -24,7 +24,7 @@ export default {
                 this.store.charactersList = response.data;
                 this.store.isFinished = true;
             })
-        }
+        },
     }
 }
 </script>
