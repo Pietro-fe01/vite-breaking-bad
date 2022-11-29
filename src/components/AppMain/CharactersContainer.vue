@@ -19,7 +19,7 @@ export default{
     <section class="bg-light px-5 py-4">
         <!-- Barra in cui viene mostrato il numero dei contatti trovati -->
         <div class="characters-found">
-            <h6 class="text-white p-3">Found {{ this.store.charactersList.length }} Characters</h6>
+            <h6 class="text-white p-3">Found {{ store.charactersList.length }} Characters from {{ store.selectedValue ? store.selectedValue : 'both Breaking Bad and Better Call Saul' }}</h6>
         </div>
         <!-- Barra in cui viene mostrato il numero dei contatti trovati -->
 

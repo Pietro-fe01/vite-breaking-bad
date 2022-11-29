@@ -13,6 +13,7 @@ export default {
         selectValue: function(value){
             this.store.charactersList = []; 
             this.store.isFinished = false;
+            this.store.selectedValue = value.target.value;
 
             axios.get("https://www.breakingbadapi.com/api/characters", {
                 params: {
