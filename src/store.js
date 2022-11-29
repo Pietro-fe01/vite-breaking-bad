@@ -5,5 +5,5 @@ import {reactive} from 'vue';
 
 export const store = reactive ({
     charactersList: [],
-    isFinished: false
+    isFinished: false,
 });

@@ -17,18 +17,26 @@ export default{
 
 <template>
     <section class="bg-light px-5 py-4">
+        <!-- Barra in cui viene mostrato il numero dei contatti trovati -->
         <div class="characters-found">
-            <h6 class="text-white p-3">Found 62 Characters</h6>
+            <h6 class="text-white p-3">Found {{ this.store.charactersList.length }} Characters</h6>
         </div>
+        <!-- Barra in cui viene mostrato il numero dei contatti trovati -->
+
+        <!-- Qui verranno stampate le card -->
         <div v-if="this.store.isFinished" class="characters-list d-flex flex-wrap mt-4 mx-3">
             <CardComponent
             v-for="(character) in store.charactersList"
             :info="character" />
         </div>
+        <!-- /Qui verranno stampate le card -->
+
+        <!-- Finchè le card non sono generate, viene mostrato un loading -->
         <div v-else class="loading d-flex flex-column align-items-center my-5">
             <div class="lds-spinner"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
             <h5 class="text-animation" data-text="Caricamento in corso...">Caricamento in corso...</h5>
         </div>
+        <!-- /Finchè le card non sono generate, viene mostrato un loading -->
     </section>
 </template>
 

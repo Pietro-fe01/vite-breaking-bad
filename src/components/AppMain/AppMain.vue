@@ -15,7 +15,8 @@ export default {
         }
     },
     created(){
-        axios.get("https://www.breakingbadapi.com/api/characters").then((response) => {
+        axios.get("https://www.breakingbadapi.com/api/characters")
+        .then((response) => {
             this.store.charactersList = response.data;
             this.store.isFinished = true;
         })

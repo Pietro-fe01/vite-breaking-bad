@@ -15,7 +15,7 @@ export default{
             <img class="w-100" :src="info.img" :alt="`${info.name}-image`">
         </div>
         <h4 class="character__name text-white my-3">{{info.name}}</h4>
-        <div class="text-muted">
+        <div class="text-muted px-1">
             <div class="character__category">{{info.category}}</div>
             <small class="character__status pb-3">{{info.status}}d</small>
         </div>
