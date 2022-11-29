@@ -1,6 +1,6 @@
 <script>
+import {store} from '/src/store.js'
 import CardComponent from './CardComponent.vue'
-import axios from 'axios'
 
 export default{
     name: 'CharactersContainer',
@@ -9,18 +9,9 @@ export default{
     },
     data(){
         return{
-            charactersList: [],
-            isFinished: false
+            store
         }
-    },
-    methods:{
-    },
-    created(){
-        axios.get("https://www.breakingbadapi.com/api/characters").then((response) => {
-            this.charactersList = response.data;
-            this.isFinished = true;
-        })
-    },
+    }
 }
 </script>
 
@@ -29,9 +20,9 @@ export default{
         <div class="characters-found">
             <h6 class="text-white p-3">Found 62 Characters</h6>
         </div>
-        <div v-if="this.isFinished" class="characters-list d-flex flex-wrap mt-4 mx-3">
+        <div v-if="this.store.isFinished" class="characters-list d-flex flex-wrap mt-4 mx-3">
             <CardComponent
-            v-for="(character) in charactersList"
+            v-for="(character) in store.charactersList"
             :info="character" />
         </div>
         <div v-else class="loading d-flex flex-column align-items-center my-5">
@@ -47,7 +38,6 @@ section{
         background-color: var(--bg-characters-found);
     }
 }
-
 /*----------------------
     LOADING ANIMATION
 ----------------------*/
